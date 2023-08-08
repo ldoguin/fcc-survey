@@ -41,12 +41,16 @@
         <div class="form-group">
           <p>Would you recommend freeCodeCamp to a friend?</p>
           <label>
-            <input
+            <input id="userecommentfalse"
               name="user-recommend"
-              value="definitely"
-              type="radio"
-              class="input-radio"
-              checked
+              value="false"
+              type="hidden"
+            />
+            <input id="userecommenttrue"
+              name="user-recommend"
+              value="true"
+              type="checkbox"
+              class="input-checkbox"
             />Yes</label
           >
         </div>
@@ -59,5 +63,7 @@
         </div>
       </form>
     </div>
+    
+    <script src="./form.js"></script>
   </body>
 </html>
