@@ -9,6 +9,17 @@ async function handleForm(event) {
     const details = `data: ${jsonObject.name}`;
     console.log(jsonObject);
 
+    const response = await fetch(".netlify/functions/hello-world", {
+       method: 'POST',
+       header: {
+        'Content-type': 'application/json'
+       },
+       body: JSON.stringify(jsonObject)
+    });
+
+    if (response.status == 200) {
+        console.log(await response.text())
+    }
 
     return false;
 }
